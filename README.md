@@ -150,7 +150,7 @@ rtype: {
         ]
     ]
 }
-
+```
 2. Get result on the basic of search by title or description
 
 ```
