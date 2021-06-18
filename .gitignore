@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 fampay-backend/
+setup_template.sh

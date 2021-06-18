@@ -2,13 +2,13 @@
 """
 
 from flask import Flask
-import data
 
 app = Flask(__name__)
 
 # Import the API routes
-from routes.youtube import *
-
+#from routes.youtube import *
+from utils.utils import search_and_insert
 # Required because app is imported in other modules
 if __name__== '__main__':
-    app.run(debug=True)
+    search_and_insert("cricket")
+    #app.run(debug=True)
