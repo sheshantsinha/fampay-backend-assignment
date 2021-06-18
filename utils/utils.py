@@ -6,7 +6,8 @@ from dbutils.queries import sql_query
 import time
 
 SLEEPTIME = 10
-api_key = os.environ.get('APIKEY') if "APIKEY" in os.environ else None
+APIINDEX = 0
+api_key = os.environ.get('APIKEY').split(",") if "APIKEY" in os.environ else None
 
 def format_youtube_result(data):
     rows = []
@@ -28,7 +29,11 @@ def build_sql_query(rows):
     return sql_query
 
 def search_youtube_data(keyword, max_results=10):
-    yt = YouTubeDataAPI(api_key)
+    global APIINDEX
+    try:
+        yt = YouTubeDataAPI(api_key[APIINDEX])
+    except:
+        APIINDEX+=1
     result = yt.search(keyword, max_results=max_results)
     return result
 

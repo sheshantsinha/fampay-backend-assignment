@@ -9,7 +9,7 @@ import threading
 app = Flask(__name__)
 
 # Import the API routes
-#from routes.youtube import *
+from routes.api import *
 # Required because app is imported in other modules
 
 if __name__== '__main__':
@@ -18,4 +18,4 @@ if __name__== '__main__':
     t1.join()
     t2 = threading.Thread(target=search_and_insert, args=(TOPIC,))
     t2.start()
-    #app.run(debug=True)
+    app.run(debug=True)
