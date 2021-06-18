@@ -77,8 +77,11 @@ class MysqlDb:
     def select_values(self, query):
         if self.continue_connection and self.db_connected:
             mycursor = self.mydb.cursor()
-            result = mycursor.execute(query)
+            mycursor.execute(query)
+            result = mycursor.fetchall()
             print(result)
             mycursor.close()
+            return result
             print("............Selected.............")
+            
 
