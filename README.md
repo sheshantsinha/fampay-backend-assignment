@@ -45,6 +45,7 @@ Table-2: `temp_youtube_results`
 ### 3. Ensure your sql is installed and have an user `youtube` and password `demo1234` or you can change this username and password as per your choice.
 ### 4. Ensure user has all privileges `GRANT ALL PRIVILEGES ON * . * TO 'youtube'@'localhost'`
 ### 5. Execute `python3 run.py`
+### 6. It will launch on port no. 5000 (probably) `http://localhost:5000/`
 
 # APIs
 
@@ -243,3 +244,14 @@ rtype: {
     ]
 }
 ```
+
+Docker Image
+
+### 1. Build docker image
+    `sudo docker build --tag fam-backend-assignment-app .`
+### 2. Run the docker image
+    `sudo docker run --name fam-backend-assignment-app -p 5001:5001 fam-backend-assignment-app 
+
+Note:- I was not able to do further steps because i start facing some issue with the sql connector with my laptop;
+
+End:)
