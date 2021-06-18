@@ -1,10 +1,11 @@
 """Routes for the youtube search.
 """
-TOPIC = "cricket"
-
 from flask import Flask
 from utils.utils import search_and_insert
 import threading
+import os
+
+TOPIC = os.environ.get('TOPIC')
 
 app = Flask(__name__)
 

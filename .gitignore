@@ -130,3 +130,4 @@ dmypy.json
 
 fampay-backend/
 setup_template.sh
+app/

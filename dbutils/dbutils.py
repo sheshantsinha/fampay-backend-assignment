@@ -69,7 +69,6 @@ class MysqlDb:
         if self.continue_connection and self.db_connected:
             mycursor = self.mydb.cursor()
             result = mycursor.execute(query)
-            print(result)
             self.mydb.commit()
             mycursor.close()
             print("............Executed.............")
