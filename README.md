@@ -41,6 +41,7 @@ Table-2: `temp_youtube_results`
 # Steps to execute
 
 ### 1. copy `setup_template.sh` to `setup.sh`
+    `cp setup_template.sh setup.sh`
     `Note:- setup_template.sh has been sent to the mail id along with this task github url, please paste it here`
 ### 2. execute `source setup.sh`
 ### 3. Ensure your sql is installed and have an user `youtube` and password `demo1234` or you can change this username and password as per your choice.
